@@ -71,6 +71,7 @@ class DisplayTimeBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#location' => $config->get('country') . "-" . $config->get('city'),
       '#cache' => [
         'expire' => time() + (60),
+        'max-age' =>'60',
       ],
     ];
     return $build;
