@@ -103,7 +103,7 @@ class TimezoneSettingsForm extends ConfigFormBase {
     $timezone = empty($config->get('timezone')) ? '' : $config->get('timezone');
     // Call a drupal service to get current time in specific format.
     if (!empty($timezone)) {
-      $time = $this->dateFormatter->format(time(), 'custom', 'jS M Y - H:m A', $timezone);
+      $time = $this->dateFormatter->format(time(), 'custom', 'jS M Y - H:i A', $timezone);
       $form['time'] = [
         '#type' => 'markup',
         '#markup' => '<div class="display_time">' . $this->t('Current time based on the selected timezone :') . " " . $time . '</div>',
