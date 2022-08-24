@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains display_zone_based_time.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function display_zone_based_time_theme() {
+  return [
+    'display_zone_based_time' => [
+      'variables' => [
+        'time' => NULL,
+        'location' => NULL,
+      ],
+    ],
+  ];
+}

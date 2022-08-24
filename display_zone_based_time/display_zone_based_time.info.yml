@@ -1,0 +1,7 @@
+name: Display time
+type: module
+description: Display time based on country zone.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: custom
+configure: display_zone_based_time.settings_form

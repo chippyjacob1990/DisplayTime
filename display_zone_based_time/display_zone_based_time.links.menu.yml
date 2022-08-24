@@ -1,0 +1,6 @@
+display_zone_based_time.settings_form:
+  title: 'Display TIme Settings'
+  route_name: display_zone_based_time.settings_form
+  description: 'Configure Country & TImezone for displaying time to users.'
+  parent: system.admin_config_services
+  weight: 0

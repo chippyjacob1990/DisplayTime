@@ -1,0 +1,7 @@
+display_zone_based_time.settings_form:
+  path: '/admin/config/system/timezone-settings-form'
+  defaults:
+    _title: 'Configure Timezone Details'
+    _form: '\Drupal\display_zone_based_time\Form\TimezoneSettingsForm'
+  requirements:
+    _permission: 'administer access'
