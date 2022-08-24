@@ -63,14 +63,13 @@ class DisplayTimeBlock extends BlockBase implements ContainerFactoryPluginInterf
   public function build() {
     $config = \Drupal::config('display_zone_based_time.timezonesettings');
     // Call a drupal service to get current time in specific format.
-    $time = $this->dateFormatter->format(time(), 'custom', 'jS M Y - H:m A', $config->get('timezone'));
+    $time = $this->dateFormatter->format(time(), 'custom', 'jS M Y - H:i A', $config->get('timezone'));
 
     $build['content'] = [
       '#theme' => 'display_zone_based_time',
       '#time' => $time,
       '#location' => $config->get('country') . "-" . $config->get('city'),
       '#cache' => [
-        'expire' => time() + (60),
         'max-age' =>'60',
       ],
     ];
