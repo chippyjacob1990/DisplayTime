@@ -106,7 +106,7 @@ class TimezoneSettingsForm extends ConfigFormBase {
       $time = $this->dateFormatter->format(time(), 'custom', 'jS M Y - H:m A', $timezone);
       $form['time'] = [
         '#type' => 'markup',
-        '#markup' => '<div class="display_time">' .time() .$time.  $this->t('Current time based on the selected timezone :') . " " . $time . '</div>',
+        '#markup' => '<div class="display_time">' . $this->t('Current time based on the selected timezone :') . " " . $time . '</div>',
       ];
     }
     return parent::buildForm($form, $form_state);
